@@ -27,4 +27,10 @@ describe('Transaction class', () => {
 
         expect(transaction.value).toBe(113)
     })
+    
+    it('should br able to get the value as a float number', () => {
+        const transaction = new Transaction('some transaction', 4.23)
+
+        expect(transaction.getValue()).toBe(4.23)
+    })
 })
