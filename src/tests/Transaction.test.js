@@ -22,6 +22,7 @@ describe('Transaction class', () => {
     })
 
     it('should save the value as an integer', () => {
+        // const transaction = () => new Transaction('some transaction', 1.13)
         const transaction = new Transaction('some transaction', 1.13)
 
         expect(transaction.value).toBe(113)
