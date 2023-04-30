@@ -21,12 +21,34 @@ Abra o terminal na pasta do projeto e execute o seguinte comando para baixar as 
 ```bash
 yarn install
 ```
-Abra o terminal na pasta do projeto e execute o seguinte comando para rodar o projeto
+Abra o terminal na pasta do projeto e execute o seguinte comando para rodar todos os testes:
 ```bash
 yarn test
 ```
-![image](https://user-images.githubusercontent.com/58920070/235045252-7b019776-c13a-4519-a6ca-4561da9ebc40.png)
+![image](https://user-images.githubusercontent.com/58920070/235376276-bb22b63d-a0d6-4fe8-9733-af6f452fc668.png)
 
-## Expected Result
-![image](https://user-images.githubusercontent.com/58920070/235045441-94aea1d9-0b2a-415f-8793-a94b697374d9.png)
+## All Tests Result
+![image](https://user-images.githubusercontent.com/58920070/235376295-a0aba90d-c09b-470e-a5cf-788110844a99.png)
+
+## Também é possível executar somente os testes unitários do projeto:
+Abra o terminal na pasta do projeto e execute o seguinte comando para rodar apenas os testes unitários:
+```bash
+yarn test:unit
+```
+![image](https://user-images.githubusercontent.com/58920070/235376443-21f31784-8374-4c99-a020-9958bdc238aa.png)
+
+
+## Unit Tests Result
+![image](https://user-images.githubusercontent.com/58920070/235376372-5a024ee0-40b9-43b5-a1d9-e4eadaa7f0ce.png)
+
+## Também é possível executar somente o teste de integração do projeto:
+Abra o terminal na pasta do projeto e execute o seguinte comando para rodar apenas o teste de integração:
+```bash
+yarn test:integration
+```
+![image](https://user-images.githubusercontent.com/58920070/235376478-97587df7-7cac-49f7-af5b-7c8546a8530b.png)
+
+## Integration Test Result
+![image](https://user-images.githubusercontent.com/58920070/235376519-4e49e6a1-2c5b-4ccb-a112-b6837d9a5ba2.png)
+
 
