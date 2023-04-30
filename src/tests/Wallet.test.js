@@ -67,9 +67,9 @@ describe('Wallet class', () => {
             getValue: () => 50.31
         }
         const expense = {
-            value: -4000,
+            value: -1299,
             createdAt: new Date(),
-            getValue: () => -40
+            getValue: () => -12.99
         }
         wallet.addTransaction(income)
         wallet.addTransaction(expense)
@@ -79,5 +79,52 @@ describe('Wallet class', () => {
         expect(incomes.total).toBe(50.31)
         expect(incomes.list).toContain(income)
         expect(incomes.list).not.toContain(expense)
+    })
+    
+    it('should not include expenses created before start date', () => {
+        const wallet = new Wallet()
+        const startDate = new Date('2022-01-01')
+        const expenseBeforeStartDate = {
+            value: -3500,
+            createdAt: new Date(startDate.getTime() - 1),
+            getValue: () => -35
+        }
+        const expenseAfterStartDate = {
+            value: -1299,
+            createdAt: new Date(startDate.getTime() + 1),
+            getValue: () => -12.99
+        }
+        wallet.addTransaction(expenseBeforeStartDate)
+        wallet.addTransaction(expenseAfterStartDate)
+
+        const expenses = wallet.getAllExpenses(startDate)
+
+        expect(expenses.total).toBe(12.99)
+        expect(expenses.list).not.toContain(expenseBeforeStartDate)
+        expect(expenses.list).toContain(expenseAfterStartDate)
+    })
+
+    it('should not include expenses created after end date', () => {
+        const wallet = new Wallet()
+        const startDate = new Date('2022-01-01')
+        const endDate = new Date('2022-01-31')
+        const expenseBeforeEndDate = {
+            value: -3500,
+            createdAt: new Date(endDate.getTime() - 1),
+            getValue: () => -35
+        }
+        const expenseAfterEndDate = {
+            value: -1299,
+            createdAt: new Date(endDate.getTime() + 1),
+            getValue: () => -12.99
+        }
+        wallet.addTransaction(expenseBeforeEndDate)
+        wallet.addTransaction(expenseAfterEndDate)
+
+        const expenses = wallet.getAllExpenses(startDate, endDate)
+
+        expect(expenses.total).toBe(35)
+        expect(expenses.list).toContain(expenseBeforeEndDate)
+        expect(expenses.list).not.toContain(expenseAfterEndDate)
     })
 })
