@@ -9,11 +9,13 @@ O projeto já possui testes unitários implementados para as classes Wallet e Tr
 
 Com esta nova informação, é possível observar que o projeto está cada vez mais robusto e bem estruturado, utilizando boas práticas de desenvolvimento e testes para garantir a qualidade do código produzido.
 
-
 ## Tecnologias 
 - Jest <img align="center" alt="Gui-NodeJs" height="30" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" />
 - Javascript <img align="center" alt="Gui-Js" height="30" width="30" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg"> 
 - NodeJS <img align="center" alt="Gui-NodeJs" height="30" width="30" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
+
+## Onde encontrar os arquivos de teste:
+![image](https://user-images.githubusercontent.com/58920070/235376600-fed81c9e-06ef-4a50-a82a-7db54f0bbc3b.png)
 
 ## Como executar
 Clone este repositório em sua máquina local.
