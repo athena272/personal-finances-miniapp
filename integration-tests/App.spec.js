@@ -31,4 +31,21 @@ describe('App integration', () => {
         expect(app.user.wallets[0].transactions[0].label).toBe('Pizza')
         expect(app.user.wallets[0].transactions[0].getValue()).toBe(-38)
     })
+
+    it('should be able to receive money', () => {
+        app.addWallet('My wallet')
+        const donation = {
+            label: 'Pizza money',
+            value: 19,
+            walletName: 'My wallet'
+        }
+
+        app.receive(donation)
+
+        expect(app.user.money).toBe(19)
+        expect(app.user.wallets[0].getBalance()).toBe(19)
+        expect(app.user.wallets[0].transactions.length).toBe(1)
+        expect(app.user.wallets[0].transactions[0].label).toBe('Pizza money')
+        expect(app.user.wallets[0].transactions[0].getValue()).toBe(19)
+    })
 })
