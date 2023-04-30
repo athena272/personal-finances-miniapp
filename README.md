@@ -1,13 +1,14 @@
 # Personal Finances Miniapp
 ## Sobre o projeto 
 
-O projeto contém um conjunto de funções definidas em um arquivo chamado function.js e testes unitários escritos em um arquivo chamado function.test.js usando a biblioteca de testes Jest.
+Ao todo, o projeto foi criado com o objetivo de praticar e aprender testes unitários e testes de integração. Os testes unitários verificam se cada função e classe individualmente funciona corretamente, enquanto os testes de integração verificam se as funções e classes trabalham bem juntas e se produzem os resultados esperados. Com a criação desses testes, é possível garantir a qualidade e a estabilidade do código e reduzir a possibilidade de erros e bugs.
 
-As funções definidas no arquivo function.js são sum, modulus, sayHelloTo, duplicateObject e addProduct. A função sum retorna a soma de dois números, a função modulus retorna o valor absoluto de um número, a função sayHelloTo retorna uma saudação para um nome, a função duplicateObject duplica um objeto e a função addProduct adiciona um produto a um carrinho.
+O projeto em questão é um aplicativo de finanças pessoais, desenvolvido em JavaScript, que permite ao usuário adicionar carteiras, efetuar compras e receber dinheiro. O aplicativo é composto por três classes principais: App, Wallet e Transaction. A classe App é responsável por gerenciar o usuário e suas carteiras, bem como processar as transações de compra e recebimento de dinheiro. A classe Wallet é responsável por armazenar as transações de uma determinada carteira e calcular seu saldo atual. Por fim, a classe Transaction representa uma transação, contendo informações como o rótulo da transação (por exemplo, "Compra de Pizza"), o valor e a data.
 
-Os testes definidos no arquivo function.test.js testam cada uma dessas funções individualmente. O primeiro teste verifica se a função sum retorna a soma correta de dois números, o segundo teste verifica se a função modulus retorna o valor absoluto correto de um número, o terceiro teste verifica se a função sayHelloTo retorna uma saudação válida para um nome, o quarto teste verifica se a função duplicateObject duplica corretamente um objeto e o quinto teste verifica se a função addProduct adiciona corretamente um produto a um carrinho.
+O projeto já possui testes unitários implementados para as classes Wallet e Transaction, garantindo a funcionalidade correta de suas respectivas funcionalidades. Agora, foi adicionado um teste de integração para a classe App, que testa o comportamento geral do aplicativo em relação à adição de carteiras, compras e recebimento de dinheiro. Este teste garante que o aplicativo está funcionando corretamente de ponta a ponta, integrando todas as funcionalidades e classes do projeto.
 
-Em resumo, é um projeto útil para quem quer aprender a escrever testes unitários em JavaScript usando a biblioteca Jest e praticar a implementação de funções básicas em JavaScript.
+Com esta nova informação, é possível observar que o projeto está cada vez mais robusto e bem estruturado, utilizando boas práticas de desenvolvimento e testes para garantir a qualidade do código produzido.
+
 
 ## Tecnologias 
 - Jest <img align="center" alt="Gui-NodeJs" height="30" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" />
