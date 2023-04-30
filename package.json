@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node src/index.js",
     "test": "jest --coverage",
-    "test:integration": "jest --coverage integration-test",
+    "test:integration": "jest --coverage integration-tests",
     "test:unit": "jest --coverage src"
   },
   "keywords": [],
