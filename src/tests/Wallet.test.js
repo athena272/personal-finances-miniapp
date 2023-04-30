@@ -2,6 +2,9 @@ const Wallet = require("../scripts/Wallet")
 
 describe('Wallet class', () => {
     let wallet
+
+    const mockTransaction = { value: 4219 }
+
     const mockIncome = {
         value: 5031,
         createdAt: new Date(),
@@ -30,7 +33,6 @@ describe('Wallet class', () => {
 
     it('should save a transaction on a wallet', () => {
 
-        const mockTransaction = 'some transaction'
         wallet.addTransaction(mockTransaction)
 
         expect(wallet.transactions).toContain(mockTransaction)
@@ -38,15 +40,13 @@ describe('Wallet class', () => {
 
     it('should update wallet balance when a transaction is saved', () => {
 
-        const mockTransaction = { value: 42 }
         wallet.addTransaction(mockTransaction)
 
-        expect(wallet.balance).toBe(42)
+        expect(wallet.balance).toBe(4219)
     })
 
     it('should get wallet balance as a number of up to two decimal places', () => {
 
-        const mockTransaction = { value: 4219 }
         wallet.addTransaction(mockTransaction)
 
         expect(wallet.getBalance()).toBe(42.19)
